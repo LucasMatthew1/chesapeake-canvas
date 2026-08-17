@@ -1,5 +1,5 @@
 import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
-import logo from "@/assets/west-shore-logo.png.asset.json";
+import logo from "@/assets/west-shore-logo.png";
 
 const nav = [
   { label: "About", href: "#about" },
@@ -19,7 +19,7 @@ export function SiteFooter() {
           <div>
             <div className="inline-flex bg-background px-4 py-3">
               <img
-                src={logo.url}
+                src={logo}
                 alt="West Shore Yacht Center"
                 width={241}
                 height={86}
