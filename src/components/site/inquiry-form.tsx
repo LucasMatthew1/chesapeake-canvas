@@ -17,9 +17,9 @@ export function InquirySection() {
     const name = String(data.get("name") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
     const phone = String(data.get("phone") ?? "").trim();
-    if (!name) next.name = "Please enter your name.";
-    if (!/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(email)) next.email = "Please enter a valid email.";
-    if (phone.replace(/\D/g, "").length < 10) next.phone = "Please enter a valid phone number.";
+    if (!name) next['name'] = "Please enter your name.";
+    if (!/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(email)) next['email'] = "Please enter a valid email.";
+    if (phone.replace(/\D/g, "").length < 10) next['phone'] = "Please enter a valid phone number.";
     setErrors(next);
     if (Object.keys(next).length > 0) return;
 
@@ -69,21 +69,21 @@ export function InquirySection() {
                   Name *
                 </label>
                 <input id="name" name="name" className={inputClass} placeholder="Full name" />
-                {errors.name && <p className="mt-2 text-xs text-destructive">{errors.name}</p>}
+                {errors['name'] && <p className="mt-2 text-xs text-destructive">{errors['name']}</p>}
               </div>
               <div>
                 <label className={labelClass} htmlFor="email">
                   Email *
                 </label>
                 <input id="email" name="email" type="email" className={inputClass} placeholder="you@email.com" />
-                {errors.email && <p className="mt-2 text-xs text-destructive">{errors.email}</p>}
+                {errors['email'] && <p className="mt-2 text-xs text-destructive">{errors['email']}</p>}
               </div>
               <div>
                 <label className={labelClass} htmlFor="phone">
                   Phone *
                 </label>
                 <input id="phone" name="phone" className={inputClass} placeholder="(410) 555-0140" />
-                {errors.phone && <p className="mt-2 text-xs text-destructive">{errors.phone}</p>}
+                {errors['phone'] && <p className="mt-2 text-xs text-destructive">{errors['phone']}</p>}
               </div>
               <div>
                 <label className={labelClass} htmlFor="make">
