@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/west-shore-logo.png.asset.json";
+import logo from "@/assets/west-shore-logo.png";
 import { CtaLink } from "./ui";
 import { cn } from "@/lib/utils";
 
@@ -38,7 +38,7 @@ export function SiteNav() {
         <div className="mx-auto grid w-full max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3.5 sm:px-8 lg:py-4">
           <a href="#top" className="flex min-w-0 items-center" aria-label="West Shore Yacht Center home">
             <img
-              src={logo.url}
+              src={logo}
               alt="West Shore Yacht Center"
               width={241}
               height={86}
